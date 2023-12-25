@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#2d3e5d</color>
+    <color name="purple_500">#00000e</color>
+    <color name="purple_700">#001833</color>
+    <color name="purple_50">#e8eaf6</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="bottom_yellow">#FFEE8A</color>
+    <color name="card_background">#F4F4F4</color>
+    <color name="card_outline">#CFC12C</color>
+    <color name="btn_background">#4CB5EC</color>
+    <color name="background_grey">#F2F2F2</color>
+    <color name="grey300">#e0e0e0</color>
+    <color name="grey500">#9e9e9e</color>
+    <color name="grey200">#eeeeee</color>
+    <color name="grey400">#bdbdbd</color>
+    <color name="pink">#9E005D</color>
+    <color name="red">#ff0000</color>
+    <color name="red50">#ffebee</color>
+    <color name="teal50">#e0f2f1</color>
+    <color name="teal100">#a7ffeb</color>
+    <color name="green">#00FF00</color>
+    <color name="green500">#4caf50</color>
+    <color name="yellow700">#fbc02d</color>
+    <color name="red100">#ffcdd2</color>
+    <color name="purple100">#e1bee7</color>
+    <color name="blue100">#bbdefb</color>
+    <color name="green100">#c8e6c9</color>
+    <color name="personal_color">#9d97cd</color>
+    <color name="property_color">#f1b87e</color>
+    <color name="business_color">#63a336</color>
+    <color name="key_color">#824f5e</color>
+</resources>

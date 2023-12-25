@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/dashBoardFragment2">
+
+    <fragment
+        android:id="@+id/checkSlotFragment2"
+        android:name="com.bms.pathogold_bms.fragment.CheckSlotFragment"
+        tools:layout="@layout/activity_check_slot" >
+        <action
+            android:id="@+id/action_checkSlotFragment2_to_bookAppointmentFragment"
+            app:destination="@id/bookAppointmentFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/patientRegistrationFragment"
+        android:name="com.bms.pathogold_bms.fragment.PatientRegistrationFragment"
+        tools:layout="@layout/activity_patient_registration" />
+
+    <fragment
+        android:id="@+id/viewAppointmentFragment"
+        android:name="com.bms.pathogold_bms.fragment.ViewAllAppointmentFragment"
+        tools:layout="@layout/fragment_view_appointment" >
+        <action
+            android:id="@+id/action_viewAppointmentFragment_to_viewAppDetailedFragment"
+            app:destination="@id/viewAppDetailedFragment" />
+        <action
+            android:id="@+id/action_viewAppointmentFragment_to_pendingFragment"
+            app:destination="@id/pendingFragment" />
+        <action
+            android:id="@+id/action_viewAppointmentFragment_to_approvedFragment"
+            app:destination="@id/approvedFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/getPatientListFragment"
+        android:name="com.bms.pathogold_bms.fragment.GetPatientListFragment"
+        tools:layout="@layout/activity_get_patient_list" >
+        <action
+            android:id="@+id/action_getPatientListFragment_to_vitalsFragment"
+            app:destination="@id/vitalsFragment" />
+        <action
+            android:id="@+id/action_getPatientListFragment_to_imageUploadDashboardFragment"
+            app:destination="@id/imageUploadDashboardFragment" />
+        <action
+            android:id="@+id/action_getPatientListFragment_to_reportsFragment"
+            app:destination="@id/reportsFragment"/>
+        <action
+            android:id="@+id/action_getPatientListFragment_to_prescriptionFragment"
+            app:destination="@id/prescriptionFragment" />
+        <action
+            android:id="@+id/action_getPatientListFragment_to_vaccinationFragment"
+            app:destination="@id/vaccinationFragment" />
+        <action
+            android:id="@+id/action_getPatientListFragment_to_reportsDetailsFragment"
+            app:destination="@id/reportsDetailsFragment" />
+        <action
+            android:id="@+id/action_getPatientListFragment_to_consentFragment"
+            app:destination="@id/consentFragment" />
+        <action
+            android:id="@+id/action_getPatientListFragment_to_viewConsentFragment"
+            app:destination="@id/viewConsentFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/dashBoardFragment2"
+        android:name="com.bms.pathogold_bms.fragment.DashBoardFragment">
+
+        <action
+            android:id="@+id/action_dashBoardFragment2_to_getPatientListFragment"
+            app:destination="@id/getPatientListFragment" />
+
+        <action
+            android:id="@+id/action_dashBoardFragment2_to_checkSlotFragment2"
+            app:destination="@id/checkSlotFragment2" />
+
+        <action
+            android:id="@+id/action_dashBoardFragment2_to_viewAppointmentFragment"
+            app:destination="@id/viewAppointmentFragment" />
+        <action
+            android:id="@+id/action_dashBoardFragment2_to_patientRegistrationFragment"
+            app:destination="@id/patientRegistrationFragment" />
+        <action
+            android:id="@+id/action_dashBoardFragment2_to_myProfileEditFragment"
+            app:destination="@id/myProfileEditFragment" />
+        <action
+            android:id="@+id/action_dashBoardFragment2_to_myDistanceFragment"
+            app:destination="@id/navigation" />
+        <action
+            android:id="@+id/action_dashBoardFragment2_to_viewVaccinationFragment"
+            app:destination="@id/viewVaccinationFragment" />
+        <action
+            android:id="@+id/action_dashBoardFragment2_to_chatDashBoardFragment"
+            app:destination="@id/chatDashBoardFragment" />
+
+        <action
+            android:id="@+id/action_dashBoardFragment2_to_dailyCashDashBoardFragment2"
+            app:destination="@id/dailyCashDashBoardFragment2" />
+        <action
+            android:id="@+id/action_dashBoardFragment2_to_viewAppointmentFragment2"
+            app:destination="@id/viewAppointmentFragment2" />
+        <action
+            android:id="@+id/action_dashBoardFragment2_to_callToDoctorFragment"
+            app:destination="@id/callToDoctorFragment" />
+        <action
+            android:id="@+id/action_dashBoardFragment2_to_serviceFragment"
+            app:destination="@id/serviceFragment" />
+        <action
+            android:id="@+id/action_dashBoardFragment2_to_chatFragment"
+            app:destination="@id/chatFragment" />
+        <action
+            android:id="@+id/action_dashBoardFragment2_to_consentFragment"
+            app:destination="@id/consentFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/vitalsFragment"
+        android:name="com.bms.pathogold_bms.fragment.VitalsFragment"
+        android:label="fragment_vitals"
+        tools:layout="@layout/fragment_vitals" />
+    <fragment
+        android:id="@+id/imageUploadDashboardFragment"
+        android:name="com.bms.pathogold_bms.fragment.ImageUploadDashboardFragment"
+        android:label="fragment_image_upload_dashboard"
+        tools:layout="@layout/fragment_image_upload_dashboard" >
+        <action
+            android:id="@+id/action_imageUploadDashboardFragment_to_viewUploadFragment"
+            app:destination="@id/viewUploadFragment" />
+        <action
+            android:id="@+id/action_imageUploadDashboardFragment_to_imageUploadFragment"
+            app:destination="@id/imageUploadFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/imageUploadFragment"
+        android:name="com.bms.pathogold_bms.fragment.ImageUploadFragment"
+        android:label="fragment_image_upload"
+        tools:layout="@layout/fragment_image_upload" />
+    <fragment
+        android:id="@+id/viewUploadFragment"
+        android:name="com.bms.pathogold_bms.fragment.ViewUploadFragment"
+        android:label="fragment_view_upload"
+        tools:layout="@layout/fragment_view_upload" />
+    <fragment
+        android:id="@+id/reportsFragment"
+        android:name="com.bms.pathogold_bms.fragment.ReportsFragment"
+        android:label="fragment_reports"
+        tools:layout="@layout/fragment_reports" >
+        <action
+            android:id="@+id/action_reportsFragment_to_reportsDetailsFragment"
+            app:destination="@id/reportsDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/prescriptionFragment"
+        android:name="com.bms.pathogold_bms.fragment.PrescriptionFragment"
+        android:label="fragment_prescription"
+        tools:layout="@layout/fragment_prescription" >
+        <action
+            android:id="@+id/action_prescriptionFragment_to_oldPrescActivity"
+            app:destination="@id/oldPrescActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/oldPrescActivity"
+        android:name="com.bms.pathogold_bms.fragment.OldPrescFragment"
+        android:label="fragment_old_presc"
+        tools:layout="@layout/fragment_old_presc" />
+    <fragment
+        android:id="@+id/bookAppointmentFragment"
+        android:name="com.bms.pathogold_bms.fragment.BookAppointmentFragment"
+        android:label="fragment_book_appointment"
+        tools:layout="@layout/fragment_book_appointment" />
+    <fragment
+        android:id="@+id/myProfileEditFragment"
+        android:name="com.bms.pathogold_bms.fragment.MyProfileEditFragment"
+        android:label="fragment_my_profile_edit_activity"
+        tools:layout="@layout/fragment_my_profile_edit_activity" />
+    <fragment
+        android:id="@+id/viewAppDetailedFragment"
+        android:name="com.bms.pathogold_bms.fragment.ViewAppDetailedFragment"
+        android:label="fragment_view_app_detailed"
+        tools:layout="@layout/fragment_view_app_detailed" />
+    <fragment
+        android:id="@+id/pendingFragment"
+        android:name="com.bms.pathogold_bms.fragment.PendingFragment"
+        android:label="fragment_pending"
+        tools:layout="@layout/fragment_pending" />
+    <fragment
+        android:id="@+id/approvedFragment"
+        android:name="com.bms.pathogold_bms.fragment.ViewAllAppointmentFragment"
+        android:label="fragment_approved"
+        tools:layout="@layout/fragment_approved" />
+    <fragment
+        android:id="@+id/reportsDetailsFragment"
+        android:name="com.bms.pathogold_bms.fragment.ReportsDetailsFragment"
+        android:label="fragment_reports_details"
+        tools:layout="@layout/fragment_reports_details" />
+    <fragment
+        android:id="@+id/viewVaccinationFragment"
+        android:name="com.bms.pathogold_bms.fragment.ViewVaccinationFragment"
+        android:label="fragment_view_vacination"
+        tools:layout="@layout/fragment_view_vacination" >
+        <action
+            android:id="@+id/action_viewVaccinationFragment_to_addVaccinationFragment"
+            app:destination="@id/addVaccinationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addVaccinationFragment"
+        android:name="com.bms.pathogold_bms.fragment.AddVaccinationFragment"
+        android:label="fragment_add_vaccination"
+        tools:layout="@layout/fragment_add_vaccination" />
+    <fragment
+        android:id="@+id/vaccinationFragment"
+        android:name="com.bms.pathogold_bms.fragment.PatientVaccinationFragment"
+        android:label="fragment_vaccination"
+        tools:layout="@layout/fragment_vaccination" >
+        <action
+            android:id="@+id/action_vaccinationFragment_to_enterDetailsVaccinationFragment"
+            app:destination="@id/enterDetailsVaccinationFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/enterDetailsVaccinationFragment"
+        android:name="com.bms.pathogold_bms.fragment.EnterDetailsVaccinationFragment"
+        android:label="fragment_enter_details_vaccination"
+        tools:layout="@layout/fragment_enter_details_vaccination" />
+    <fragment
+        android:id="@+id/chatDashBoardFragment"
+        android:name="com.bms.pathogold_bms.fragment.ChatDashBoardFragment"
+        android:label="fragment_chat_dash_board"
+        tools:layout="@layout/fragment_chat_dash_board" />
+    <!--<fragment
+        android:id="@+id/dailyCashRegisterFragment2"
+        android:name="com.bms.pathogold.fragment.DailyCashRegisterFragment"
+        android:label="fragment_daily_cash_register"
+        tools:layout="@layout/fragment_daily_cash_register" />-->
+    <navigation android:id="@+id/navigation"
+        app:startDestination="@id/myDistanceFragment">
+        <fragment
+            android:id="@+id/myDistanceFragment"
+            android:name="com.bms.pathogold_bms.fragment.MyDistanceFragment"
+            android:label="fragment_my_distance"
+            tools:layout="@layout/fragment_my_distance" />
+    </navigation>
+
+    <fragment
+        android:id="@+id/dailyCashDashBoardFragment2"
+        android:name="com.bms.pathogold_bms.fragment.DailyCashDashBoardFragment"
+        android:label="fragment_daily_cash_dash_board2"
+        tools:layout="@layout/fragment_daily_cash_dash_board2">
+
+        <action
+            android:id="@+id/action_dailyCashDashBoardFragment2_to_dailyCashRegisterFragment"
+            app:destination="@id/dailyCashRegisterFragment" />
+        <action
+            android:id="@+id/action_dailyCashDashBoardFragment2_to_dailyCashSummaryFragment"
+            app:destination="@id/dailyCashSummaryFragment" />
+        <action
+            android:id="@+id/action_dailyCashDashBoardFragment2_to_dailyCashGraphFragment"
+            app:destination="@id/dailyCashGraphFragment" />
+        <action
+            android:id="@+id/action_dailyCashDashBoardFragment2_to_dailyCashStatusFragment"
+            app:destination="@id/dailyCashStatusFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/dailyCashRegisterFragment"
+        android:name="com.bms.pathogold_bms.fragment.DailyCashRegisterFragment"
+        android:label="fragment_daily_cash_register"
+        tools:layout="@layout/fragment_daily_cash_register" />
+
+    <fragment
+        android:id="@+id/dailyCashSummaryFragment"
+        android:name="com.bms.pathogold_bms.fragment.DailyCashSummaryFragment"
+        android:label="fragment_daily_cash_summary"
+        tools:layout="@layout/fragment_daily_cash_summary" />
+
+    <fragment
+        android:id="@+id/dailyCashGraphFragment"
+        android:name="com.bms.pathogold_bms.fragment.DailyCashGraphFragment"
+        android:label="fragment_daily_cash_graph"
+        tools:layout="@layout/fragment_daily_cash_graph" />
+    <fragment
+        android:id="@+id/dailyCashStatusFragment"
+        android:name="com.bms.pathogold_bms.fragment.DailyCashStatusFragment"
+        android:label="fragment_daily_cash_status"
+        tools:layout="@layout/fragment_daily_cash_status" />
+    <fragment
+        android:id="@+id/viewAppointmentFragment2"
+        android:name="com.bms.pathogold_bms.fragment.ViewAppointmentDashBoardFragment"
+        android:label="ViewAppointmentFragment2" >
+        <action
+            android:id="@+id/action_viewAppointmentFragment2_to_viewTestFragment"
+            app:destination="@id/viewTestFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/callToDoctorFragment"
+        android:name="com.bms.pathogold_bms.fragment.CallToDoctorFragment"
+        android:label="CallToDoctorFragment" />
+    <fragment
+        android:id="@+id/viewTestFragment"
+        android:name="com.bms.pathogold_bms.fragment.ViewTestFragment"
+        android:label="fragment_view_test"
+        tools:layout="@layout/fragment_view_test" />
+    <fragment
+        android:id="@+id/serviceFragment"
+        android:name="com.bms.pathogold_bms.fragment.ServiceFragment"
+        android:label="fragment_service"
+        tools:layout="@layout/fragment_service" />
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.bms.pathogold_bms.fragment.ChatFragment"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat" />
+    <fragment
+        android:id="@+id/consentFragment"
+        android:name="com.bms.pathogold_bms.fragment.ConsentFragment"
+        android:label="fragment_consent"
+        tools:layout="@layout/fragment_consent" />
+    <fragment
+        android:id="@+id/viewConsentFragment"
+        android:name="com.bms.pathogold_bms.fragment.ViewConsentFragment"
+        android:label="fragment_view_consent2"
+        tools:layout="@layout/fragment_view_consent2" />
+</navigation>

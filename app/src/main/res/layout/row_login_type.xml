@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardview"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_margin="@dimen/_10sdp"
+        app:cardBackgroundColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_login_type"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/patient_icon" />
+
+        <TextView
+            android:id="@+id/tv_login_type_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/sourcesanspro_regular"
+            android:gravity="center"
+            android:text="@string/patient"
+            android:textColor="@color/purple_700"
+            android:textSize="@dimen/_13ssp"
+            android:textStyle="bold"
+            android:singleLine="true"
+            app:layout_constraintEnd_toEndOf="@+id/cv_patient"
+            app:layout_constraintStart_toStartOf="@+id/cv_patient"
+            app:layout_constraintTop_toBottomOf="@+id/cv_patient" />
+    </com.google.android.material.card.MaterialCardView>
+    
+</androidx.constraintlayout.widget.ConstraintLayout>

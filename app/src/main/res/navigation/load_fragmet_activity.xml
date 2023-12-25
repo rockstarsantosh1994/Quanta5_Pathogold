@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/load_fragment_activity">
+
+
+    <fragment
+        android:id="@+id/getPatientListFragment2"
+        android:name="com.bms.pathogold_bms.fragment.GetPatientListFragment"
+        android:label="activity_get_patient_list"
+        tools:layout="@layout/activity_get_patient_list" />
+</navigation>

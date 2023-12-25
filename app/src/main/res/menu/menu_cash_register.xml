@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/bottom_dashboard"
+        android:title="@string/dashboard"
+        android:icon="@drawable/ic_baseline_preview_24"/>
+
+    <item
+        android:id="@+id/bottom_home"
+        android:title="@string/daily_cash_summary"
+        android:icon="@drawable/ic_view_upload"/>
+
+    <item
+        android:id="@+id/bottom_consumer"
+        android:title="@string/daily_cash_register"
+        android:icon="@drawable/ic_upload"/>
+
+    <item
+        android:id="@+id/bottom_cash_status"
+        android:title="@string/daily_status"
+        android:icon="@drawable/ic_view_upload"/>
+</menu>

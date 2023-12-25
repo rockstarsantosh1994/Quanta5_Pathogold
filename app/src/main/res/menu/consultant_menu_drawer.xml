@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/grp1"
+        android:orderInCategory="101">
+
+        <!--
+                android:icon="@drawable/ic_scoreboard"-->
+        <item
+            android:id="@+id/nav_home"
+            android:title="@string/home" />
+
+        <item
+            android:id="@+id/nav_todays_patient"
+            android:title="@string/today_s_patient" />
+
+        <item
+            android:id="@+id/nav_all_patient"
+            android:title="@string/all_patient" />
+
+        <item
+            android:id="@+id/nav_call_to_patient"
+            android:title="@string/call_to_patient"/>
+
+        <item
+            android:id="@+id/nav_chat_"
+            android:title="@string/chats" />
+
+        <item
+            android:id="@+id/nav_my_profile"
+            android:title="@string/my_profile" />
+
+        <item
+            android:id="@+id/nav_patient_registration"
+            android:title="@string/patient_registration" />
+
+        <item
+            android:id="@+id/nav_appointments"
+            android:title="@string/appointment" />
+
+        <item
+            android:id="@+id/nav_add_view_vaccination"
+            android:title="@string/add_view_vaccination" />
+
+        <item
+            android:id="@+id/nav_feedback"
+            android:title="@string/feedback" />
+
+        <item
+            android:id="@+id/nav_about_us"
+            android:title="@string/about_us" />
+
+        <item
+            android:id="@+id/nav_terms_and_condition"
+            android:title="@string/terms_and_conditions" />
+
+        <!--   <item
+               android:id="@+id/nav_my_distance"
+               android:title="@string/my_distance" />
+
+           <item
+               android:id="@+id/nav_end_job"
+               android:title="@string/end_job" />-->
+
+        <item
+            android:id="@+id/nav_logout"
+            android:title="@string/logout" />
+    </group>
+</menu>

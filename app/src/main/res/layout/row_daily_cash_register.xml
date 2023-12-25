@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_5sdp"
+    android:orientation="vertical">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_patient_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="@color/grey200"
+        app:strokeWidth="@dimen/_1sdp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_patient_bill_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:fontFamily="@font/sourcesanspro_regular"
+                android:lineSpacingMultiplier="0.5"
+                android:text="101"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_patient_exam_date" />
+
+            <TextView
+                android:id="@+id/tv_patient_exam_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/sourcesanspro_regular"
+                android:lineSpacingMultiplier="0.5"
+                android:paddingEnd="@dimen/_10sdp"
+                android:text="10021054546"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_patient_reg_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sourcesanspro_regular"
+                android:lineSpacingMultiplier="0.5"
+                android:paddingEnd="@dimen/_10sdp"
+                android:text="10021054546"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_patient_exam_date" />
+
+            <TextView
+                android:id="@+id/tv_patient_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:fontFamily="@font/sourcesanspro_regular"
+                android:lineSpacingMultiplier="0.5"
+                android:text="Santosh Pardeshi"
+                android:textAllCaps="true"
+                android:textColor="@color/purple_700"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_patient_reg_no" />
+
+            <!--  <TextView
+                  android:id="@+id/tv_billl_amt"
+                  android:layout_width="@dimen/_50sdp"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="@dimen/_20sdp"
+                  android:fontFamily="@font/sourcesanspro_regular"
+                  android:text="@string/bill_amt"
+                  android:textSize="@dimen/_12ssp"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintTop_toBottomOf="@+id/tv_patient_name" />
+
+              <TextView
+                  android:id="@+id/tv_billl_amt_value"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="@dimen/_5sdp"
+                  android:fontFamily="@font/sourcesanspro_regular"
+                  android:text="24"
+                  android:textColor="@color/black"
+                  android:textSize="@dimen/_12ssp"
+                  app:layout_constraintBottom_toBottomOf="@+id/tv_billl_amt"
+                  app:layout_constraintStart_toEndOf="@+id/tv_billl_amt"
+                  app:layout_constraintTop_toTopOf="@+id/tv_billl_amt" />-->
+
+            <TextView
+                android:id="@+id/tv_mob_of_pay_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:fontFamily="@font/sourcesanspro_regular"
+                android:text="@string/mop"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintEnd_toStartOf="@+id/tv_mode_of_pay"
+                app:layout_constraintTop_toBottomOf="@+id/tv_patient_name" />
+
+            <TextView
+                android:id="@+id/tv_mode_of_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/sourcesanspro_regular"
+                android:text="Cash"
+                android:textColor="@color/green500"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_mob_of_pay_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_mob_of_pay_text" />
+
+            <TextView
+                android:id="@+id/tv_patient_mobile"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:fontFamily="@font/sourcesanspro_regular"
+                android:text="@string/mobile"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_patient_name" />
+
+            <TextView
+                android:id="@+id/tv_patient_mobile_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:fontFamily="@font/sourcesanspro_regular"
+                android:text="24"
+                android:textColor="@color/purple_700"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_patient_mobile"
+                app:layout_constraintStart_toEndOf="@+id/tv_patient_mobile"
+                app:layout_constraintTop_toTopOf="@+id/tv_patient_mobile" />
+
+            <TextView
+                android:id="@+id/tv_patient_status"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:fontFamily="@font/sourcesanspro_regular"
+                android:text="@string/status"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_patient_mobile" />
+
+            <TextView
+                android:id="@+id/tv_patient_status_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:fontFamily="@font/sourcesanspro_regular"
+                android:text="24"
+                android:textColor="@color/purple_700"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_patient_status"
+                app:layout_constraintStart_toEndOf="@+id/tv_patient_status"
+                app:layout_constraintTop_toTopOf="@+id/tv_patient_status" />
+
+            <TextView
+                android:id="@+id/tv_patient_testname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:fontFamily="@font/sourcesanspro_regular"
+                android:text="@string/test_name"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_patient_status" />
+
+            <!-- <TextView
+               android:id="@+id/tv_patient_testname_value"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="@dimen/_5sdp"
+               android:fontFamily="@font/sourcesanspro_regular"
+               android:text="24"
+               android:textColor="@color/purple_700"
+               android:textSize="@dimen/_12ssp"
+               android:textStyle="bold"
+               app:layout_constraintBottom_toBottomOf="@+id/tv_patient_testname"
+               app:layout_constraintStart_toEndOf="@+id/tv_patient_testname"
+               app:layout_constraintTop_toTopOf="@+id/tv_patient_testname" />
+
+           <TextView
+               android:id="@+id/tv_patient_status"
+               android:layout_width="@dimen/_30sdp"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="@dimen/_20sdp"
+               android:fontFamily="@font/sourcesanspro_regular"
+               android:text="@string/status"
+               android:textAllCaps="true"
+               android:textSize="@dimen/_12ssp"
+               android:textStyle="bold"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/tv_patient_testname" />
+
+           <TextView
+               android:id="@+id/tv_patient_status_value"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="@dimen/_5sdp"
+               android:fontFamily="@font/sourcesanspro_regular"
+               android:text="24"
+               android:textColor="@color/purple_700"
+               android:textSize="@dimen/_12ssp"
+               android:textStyle="bold"
+               app:layout_constraintBottom_toBottomOf="@+id/tv_patient_status"
+               app:layout_constraintStart_toEndOf="@+id/tv_patient_status"
+               app:layout_constraintTop_toTopOf="@+id/tv_patient_status" />-->
+
+            <View
+                android:id="@+id/view_check_slot"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@color/grey500"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_patient_testname" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/view_check_slot"
+                android:layout_marginBottom="@dimen/_5sdp">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_bill_amt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_marginStart="@dimen/_3sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_3sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/editext_background"
+                        android:backgroundTint="@color/key_color"
+                        android:fontFamily="@font/sourcesanspro_regular"
+                        android:gravity="center|center_horizontal"
+                        android:text="@string/bill_amt"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="bold"
+                        android:visibility="visible"/>
+
+                    <TextView
+                        android:id="@+id/tv_net_amt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_marginStart="@dimen/_3sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_3sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/editext_background"
+                        android:backgroundTint="@color/business_color"
+                        android:fontFamily="@font/sourcesanspro_regular"
+                        android:gravity="center"
+                        android:lineSpacingMultiplier="0.5"
+                        android:text="@string/net_amt"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_vitals"
+                        app:layout_constraintEnd_toStartOf="@+id/tv_video_call"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/tv_vitals"
+                        app:layout_constraintTop_toBottomOf="@+id/view_check_slot" />
+
+                    <TextView
+                        android:id="@+id/tv_balance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_marginStart="@dimen/_3sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_3sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/editext_background"
+                        android:backgroundTint="@color/property_color"
+                        android:fontFamily="@font/sourcesanspro_regular"
+                        android:gravity="center"
+                        android:text="@string/bal"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_discount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_marginStart="@dimen/_3sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_3sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/editext_background"
+                        android:backgroundTint="@color/personal_color"
+                        android:fontFamily="@font/sourcesanspro_regular"
+                        android:gravity="center"
+                        android:text="@string/dis"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_video_call"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/tv_video_call"
+                        app:layout_constraintTop_toBottomOf="@+id/view_check_slot" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

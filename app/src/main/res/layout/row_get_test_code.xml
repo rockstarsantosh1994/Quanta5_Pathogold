@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <CheckBox
+        android:id="@+id/cb_checbox"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:gravity="left|center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_11ssp"
+        android:buttonTint="@color/purple_700"
+        android:textStyle="bold"
+        android:paddingStart="@dimen/_2sdp"
+        android:paddingEnd="@dimen/_2sdp"
+        android:singleLine="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_test_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/green500"
+        android:textSize="@dimen/_13ssp"
+        android:textStyle="bold"
+        android:layout_marginStart="@dimen/_50sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/cb_checbox"
+        app:layout_constraintStart_toEndOf="@+id/cb_checbox"
+        app:layout_constraintTop_toTopOf="@+id/cb_checbox"
+        android:layout_marginBottom="@dimen/_2sdp"/>
+
+    <View
+        android:id="@+id/view_check_slot"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bottom_yellow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cb_checbox" />
+</androidx.appcompat.widget.LinearLayoutCompat>
