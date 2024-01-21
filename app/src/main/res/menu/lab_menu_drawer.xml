@@ -27,7 +27,7 @@
             android:id="@+id/nav_report_status"
             android:title="@string/report_status" />-->
 
-        <item
+     <!--   <item
             android:id="@+id/nav_services"
             android:title="@string/services" />
 
@@ -37,7 +37,7 @@
 
         <item
             android:id="@+id/nav_support"
-            android:title="@string/support" />
+            android:title="@string/support" />-->
 
         <item
             android:id="@+id/nav_my_profile"

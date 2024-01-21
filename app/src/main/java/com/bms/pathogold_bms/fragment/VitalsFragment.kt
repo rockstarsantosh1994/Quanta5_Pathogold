@@ -396,7 +396,7 @@ class VitalsFragment : BaseFragment(), View.OnClickListener {
         for (i in 0 until patientHistoryName.size) {
             historyVitalRequestBO.setPepatId(getPatientListBO?.PePatID.toString())
             historyVitalRequestBO.setOpdNo(getPatientListBO?.regno.toString())
-            historyVitalRequestBO.setCompanyid(AllKeys.COMPANY_ID)
+            historyVitalRequestBO.setCompanyid(mContext?.let { CommonMethods.getPrefrence(it,AllKeys.COMPANY_ID) })
             historyVitalRequestBO.setHistoryName(patientHistoryName[i].replace("[", "").replace("]", ""))
             historyVitalRequestBO.setHistCatId(patientHistoryId[i].replace("[", "").replace("]", ""))
 
@@ -444,7 +444,7 @@ class VitalsFragment : BaseFragment(), View.OnClickListener {
         for (i in 0 until allergyID.size) {
             allergyRequestBO.setPepatId(getPatientListBO?.PePatID.toString())
             allergyRequestBO.setOpdNo(getPatientListBO?.regno.toString())
-            allergyRequestBO.setCompanyid(AllKeys.COMPANY_ID)
+            allergyRequestBO.setCompanyid(mContext?.let { CommonMethods.getPrefrence(it,AllKeys.COMPANY_ID) })
             allergyRequestBO.setAllergyId(allergyID[i].replace("[", "").replace("]", ""))
             allergyRequestBO.setAllergyName(allergyName[i].replace("[", "").replace("]", ""))
             allergyRequestBO.setAllergyCatId(allergyCatID[i].replace("[", "").replace("]", ""))

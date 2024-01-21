@@ -49,7 +49,7 @@ class ApprovedAppAdapter(
         }
 
         holder.tvName.text = viewAppointmentArrayList[position].PatientName
-        holder.tvDate.text = viewAppointmentArrayList[position].Day
+        holder.tvDate.text = CommonMethods.parseDateToddMMyyyy(viewAppointmentArrayList[position].Day,"MM/dd/yyyy hh:mm:ss a","d, MMMM  yyyy")
         holder.tvTime.text = viewAppointmentArrayList[position].Timeslot
         holder.tvMobileNumber.text = viewAppointmentArrayList[position].Mobileno
 

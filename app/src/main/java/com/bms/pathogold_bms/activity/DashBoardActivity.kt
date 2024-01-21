@@ -329,14 +329,14 @@ class DashBoardActivity : BaseActivity(), NavigationView.OnNavigationItemSelecte
                 }
             }
 
-            R.id.nav_services -> {
+           /* R.id.nav_services -> {
                 toolbar?.title = resources.getString(R.string.services)
                 navController.navigate(R.id.serviceFragment)
             }
 
             R.id.nav_offers -> {
                 CommonMethods.showDialogForError(mContext!!, "Comming soon..")
-            }
+            }*/
 
             R.id.nav_my_profile -> {
                 toolbar?.title = resources.getString(R.string.my_profile)
@@ -411,7 +411,7 @@ class DashBoardActivity : BaseActivity(), NavigationView.OnNavigationItemSelecte
                 }
             }
 
-            R.id.nav_support -> {
+            /*R.id.nav_support -> {
                 if (CommonMethods.getPrefrence(mContext!!, AllKeys.SUPPORT_TOKEN)
                         .equals(AllKeys.DNF)
                 ) {
@@ -452,7 +452,7 @@ class DashBoardActivity : BaseActivity(), NavigationView.OnNavigationItemSelecte
                     intent.putExtra("firebase_bo", fireBaseBO)
                     startActivity(intent)
                 }
-            }
+            }*/
 
             R.id.nav_view_appintment -> {
                 toolbar?.title = resources.getString(R.string.view_appointment)

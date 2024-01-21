@@ -54,6 +54,7 @@ class AllKeys {
         //var COMPANY_ID = "10"
         var COMPANY_ID = "COMPANY_ID"
         var Consultant = "Consultant"
+        var CONSULTATION="Consultation"
         var Lab_Technician = "Lab Technician"
         var Phlebotomist = "Phlebotomist"
         var Patient = "Patient"

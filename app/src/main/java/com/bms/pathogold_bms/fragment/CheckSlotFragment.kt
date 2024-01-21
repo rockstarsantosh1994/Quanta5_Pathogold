@@ -76,7 +76,8 @@ class CheckSlotFragment : BaseFragment(), View.OnClickListener, DatePickerListen
     private var llSwitchGroup: LinearLayoutCompat? = null
 
     private var stAppointmentType: String? = null
-    private var stBookingType: String? = "Diagnostics"
+   // private var stBookingType: String? = "Diagnostics"
+    private var stBookingType: String? = AllKeys.CONSULTATION
 
     private var viewAppointmentBO: ViewAppointmentBO? = null
 
@@ -135,6 +136,21 @@ class CheckSlotFragment : BaseFragment(), View.OnClickListener, DatePickerListen
                 showDialog(AllKeys.NO_INTERNET_AVAILABLE)
             }
         }
+
+        if (CommonMethods.getPrefrence(mContext!!, AllKeys.USERTYPE).equals(AllKeys.Consultant)) {
+            stBookingType = context?.getString(R.string.consultation)
+            llSwitchGroup?.visibility = View.GONE
+        } else {
+            llSwitchGroup?.visibility = View.GONE
+            //stBookingType = context?.getString(R.string.diagnostics)
+
+            //On select of diagnostics, and consultation..
+            onSelectOfRadioButton(stBookingType.toString())
+
+            //reset Existing Data
+            resetRecyclerView()
+        }
+        Log.e(TAG, "switchAppointmentType: $stBookingType")
     }
 
     override val activityLayout: Int
@@ -163,7 +179,7 @@ class CheckSlotFragment : BaseFragment(), View.OnClickListener, DatePickerListen
 
         //SwitchCompat type layout..
         switchAppointmentType = view.findViewById(R.id.switch_)
-
+        switchAppointmentType?.isChecked = true
         //AppCompatButton binding...
         //btnGetSlots = view.findViewById(R.id.btn_get_slots)
 

@@ -126,7 +126,8 @@ class ViewAppointmentDashBoardFragment : BaseFragment(), View.OnClickListener , 
         if (viewAllAppointmentModel.list.value!!.isEmpty()) {
             if(CommonMethods.isNetworkAvailable(mContext!!)){
                 etFromDate?.setText(CommonMethods.getTodayDate("dd/MM/yyyy"))
-                var sdf = SimpleDateFormat("dd/MM/yyyy")
+                etToDate?.setText(CommonMethods.getTodayDate("dd/MM/yyyy"))
+                /*var sdf = SimpleDateFormat("dd/MM/yyyy")
                 val c = Calendar.getInstance()
                 c.time = sdf.parse(etFromDate?.text.toString())
                 c.add(Calendar.MONTH,1)
@@ -139,7 +140,7 @@ class ViewAppointmentDashBoardFragment : BaseFragment(), View.OnClickListener , 
 
                 val dateFormat1: DateFormat = SimpleDateFormat("dd/MM/yyyy")
                 val strDate = dateFormat1.format(toDate)
-                etToDate?.setText(strDate)
+                etToDate?.setText(strDate)*/
 
                 //viewAppointmentAll(mContext?.let { CommonMethods.getPrefrence(it, AllKeys.HSC_ID) }.toString())
                 viewAppointmentAll(mContext?.let { CommonMethods.getPrefrence(it, AllKeys.HSC_ID) }.toString(), CommonMethods.parseDateToddMMyyyy(etFromDate?.text.toString(), "dd/MM/yyyy", "MM/dd/yyyy").toString(),
@@ -157,9 +158,17 @@ class ViewAppointmentDashBoardFragment : BaseFragment(), View.OnClickListener , 
             setDynamicFragmentToTabLayout(0)
             isFirstTime=false
         }
+
+        stBookingType = if (switchAppointmentType?.isChecked == true) {
+            context?.getString(R.string.consultation)
+        } else {
+            context?.getString(R.string.diagnostics)
+        }
+
     }
 
     private fun initViews(view: View) {
+
         etFromDate = view.findViewById(R.id.et_from_date)
         etToDate = view.findViewById(R.id.et_to_date)
         etToDate?.setOnClickListener(this)
@@ -168,6 +177,8 @@ class ViewAppointmentDashBoardFragment : BaseFragment(), View.OnClickListener , 
 
         //SwitchCompat type layout..
         switchAppointmentType=view.findViewById(R.id.switch_)
+        switchAppointmentType?.isChecked = true
+
 
         //TextView...
         tvNoDataFoundConsultation=view.findViewById(R.id.tv_no_data_found_consulataion)
@@ -209,10 +220,10 @@ class ViewAppointmentDashBoardFragment : BaseFragment(), View.OnClickListener , 
         switchAppointmentType?.setOnCheckedChangeListener { buttonView, isChecked ->
             // do something, the isChecked will be
             // true if the switch is in the On position
-            if (switchAppointmentType?.isChecked == true) {
-                stBookingType = context?.getString(R.string.consultation)
+            stBookingType = if (switchAppointmentType?.isChecked == true) {
+                context?.getString(R.string.consultation)
             } else {
-                stBookingType = context?.getString(R.string.diagnostics)
+                context?.getString(R.string.diagnostics)
             }
             //call function based on button select
             onSelectOfRadioButton(stBookingType.toString())
@@ -406,7 +417,7 @@ class ViewAppointmentDashBoardFragment : BaseFragment(), View.OnClickListener , 
     }
 
     private fun onSelectOfRadioButton(stBookingTypeFor: String) {
-        if (stBookingTypeFor.equals("Consultation", false)) {
+        if (stBookingTypeFor.equals(context?.getString(R.string.consultation), false)) {
             if (consultationBOArrayList.size > 0) {
                 llConsultation?.visibility = View.VISIBLE
                 tvNoDataFoundConsultation?.visibility = View.GONE
@@ -420,7 +431,7 @@ class ViewAppointmentDashBoardFragment : BaseFragment(), View.OnClickListener , 
                 llConsultation?.visibility = View.GONE
                 tvNoDataFoundConsultation?.visibility = View.VISIBLE
             }
-        } else if (stBookingTypeFor.equals("Diagnostics", false)) {
+        } else if (stBookingTypeFor.equals(context?.getString(R.string.diagnostics), false)) {
             llConsultation?.visibility = View.VISIBLE
             tvNoDataFoundConsultation?.visibility = View.GONE
             if (pheloboBOArrayList.size > 0) {
@@ -444,7 +455,7 @@ class ViewAppointmentDashBoardFragment : BaseFragment(), View.OnClickListener , 
         if (CommonMethods.isNetworkAvailable(mContext!!)) {
             viewAppointmentAll(consultationBO!!.Pno,CommonMethods.parseDateToddMMyyyy(etFromDate?.text.toString(), "dd/MM/yyyy", "MM/dd/yyyy").toString(),
                 CommonMethods.parseDateToddMMyyyy(etToDate?.text.toString(), "dd/MM/yyyy", "MM/dd/yyyy").toString())
-            llConsultation?.visibility=View.GONE
+            //llConsultation?.visibility=View.GONE
         } else {
             CommonMethods.showDialogForError(mContext!!, AllKeys.NO_INTERNET_AVAILABLE)
         }
@@ -527,7 +538,7 @@ class ViewAppointmentDashBoardFragment : BaseFragment(), View.OnClickListener , 
 
     private fun getConsultationList() {
         val params: MutableMap<String, String> =HashMap()
-        params["LabCode"] = mContext?.let { CommonMethods.getPrefrence(it,AllKeys.LABNAME).toString() }!!
+        params["LabCode"] = mContext?.let { CommonMethods.getPrefrence(it,AllKeys.LABNAME)}.toString()
         params["Companyid"] =   mContext?.let { CommonMethods.getPrefrence(it, AllKeys.COMPANY_ID) }.toString()
 
         Log.e(TAG, "getConsultationList: $params")
@@ -546,9 +557,11 @@ class ViewAppointmentDashBoardFragment : BaseFragment(), View.OnClickListener , 
                     Log.e(TAG, "onSuccess: $consultationResponse")
                     if (consultationResponse.ResponseCode == 200) {
                         //Calling Intent...
-                        // Toast.makeText(mContext, "" + getPatientResponse.Message, Toast.LENGTH_SHORT).show()
+                        //Toast.makeText(mContext, "" + getPatientResponse.Message, Toast.LENGTH_SHORT).show()
                         consultationBOArrayList.clear()
                         consultationBOArrayList.addAll(consultationResponse.ResultArray)
+                        //call function based on button select
+                        onSelectOfRadioButton(stBookingType.toString())
                     }
                 }
 

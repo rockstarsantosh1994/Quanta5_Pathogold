@@ -19,13 +19,13 @@
             android:id="@+id/nav_all_patient"
             android:title="@string/all_patient" />
 
-        <item
+       <!-- <item
             android:id="@+id/nav_chat_"
             android:title="@string/chats" />
 
         <item
             android:id="@+id/nav_offers"
-            android:title="@string/my_offers" />
+            android:title="@string/my_offers" />-->
 
         <item
             android:id="@+id/nav_my_profile"
