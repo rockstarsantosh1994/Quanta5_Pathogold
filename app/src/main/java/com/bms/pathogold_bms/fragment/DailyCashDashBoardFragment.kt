@@ -490,7 +490,11 @@ class DailyCashDashBoardFragment : BaseFragment(), View.OnClickListener {
         val progress = ProgressDialog(activity)
         progress.setMessage("Please wait...")
         progress.setProgressStyle(ProgressDialog.STYLE_SPINNER)
-        progress.show()
+        if(activity?.isFinishing == true){
+            if(activity?.isFinishing == true){
+            progress.show()
+        }
+        }
         progress.setCancelable(false)
 
         digiPath?.getApiRequestHelper()
@@ -547,7 +551,11 @@ class DailyCashDashBoardFragment : BaseFragment(), View.OnClickListener {
         val progress = ProgressDialog(activity)
         progress.setMessage("Please wait...")
         progress.setProgressStyle(ProgressDialog.STYLE_SPINNER)
-        progress.show()
+        if(activity?.isFinishing == true){
+            if(activity?.isFinishing == true){
+            progress.show()
+        }
+        }
         progress.setCancelable(false)
 
         digiPath?.getApiRequestHelper()
@@ -605,7 +613,9 @@ class DailyCashDashBoardFragment : BaseFragment(), View.OnClickListener {
         val progress = ProgressDialog(activity)
         progress.setMessage("Please wait...")
         progress.setProgressStyle(ProgressDialog.STYLE_SPINNER)
-        progress.show()
+        if(activity?.isFinishing == true){
+            progress.show()
+        }
         progress.setCancelable(false)
 
         digiPath?.getApiRequestHelper()
@@ -764,7 +774,9 @@ class DailyCashDashBoardFragment : BaseFragment(), View.OnClickListener {
         val progress = ProgressDialog(activity)
         progress.setMessage("Please Wait....")
         progress.setProgressStyle(ProgressDialog.STYLE_SPINNER)
-        progress.show()
+        if(activity?.isFinishing == true){
+            progress.show()
+        }
         progress.setCancelable(false)
 
         digiPath?.getApiRequestHelper()

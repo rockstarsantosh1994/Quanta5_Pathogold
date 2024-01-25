@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.DatePickerDialog
 import android.app.ProgressDialog
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
@@ -37,6 +38,8 @@ import com.bms.pathogold_bms.utility.AllKeys
 import com.bms.pathogold_bms.utility.CommonMethods
 import com.google.android.material.textfield.MaterialAutoCompleteTextView
 import com.google.gson.Gson
+import com.shreyaspatil.MaterialDialog.MaterialDialog
+import com.shreyaspatil.MaterialDialog.interfaces.DialogInterface
 import de.hdodenhof.circleimageview.CircleImageView
 import io.paperdb.Paper
 import java.util.*
@@ -362,7 +365,7 @@ class VitalsFragment : BaseFragment(), View.OnClickListener {
                         //insert Paitent history...
                         insertPatientVitalHistory()
 
-                        CommonMethods.showDialogForSuccess(activity!!, commonResponse.Message)
+                        showDialogForSuccess(activity!!, commonResponse.Message)
                     } else {
                         CommonMethods.showDialogForError(activity!!, commonResponse.Message)
                     }
@@ -374,6 +377,26 @@ class VitalsFragment : BaseFragment(), View.OnClickListener {
                     Log.e(TAG, "onFailure: $apiResponse")
                 }
             })
+    }
+
+    fun showDialogForSuccess(context: Context, message: String) {
+        val mDialog: MaterialDialog = MaterialDialog.Builder(context as Activity)
+            .setTitle(message) // .setMessage("Thank you for your interest in MACSI, Your application is being processed. We will get back to you in timely manner")
+            .setCancelable(false)
+            .setAnimation(R.raw.success_exploration)
+            .setPositiveButton("Ok"
+            ) { dialogInterface: DialogInterface, which: Int ->
+                // Delete Operation
+                dialogInterface.dismiss()
+                //(context as DashBoardActivity).navController.popBackStack(R.id.patientRegistrationFragment, true)
+                 (context as DashBoardActivity).navController.popBackStack(R.id.vitalsFragment, true)
+                //context.finish()
+                //Calling Intent...
+            } //.setNegativeButton("Cancel", (dialogInterface, which) -> dialogInterface.dismiss())
+            .build()
+
+        // Show Dialog
+        mDialog.show()
     }
 
     private fun insertPatientVitalHistory(){

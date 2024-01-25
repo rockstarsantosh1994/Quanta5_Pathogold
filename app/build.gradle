@@ -72,8 +72,8 @@ android {
         }
 
         quanta5 {
-            versionCode 3
-            versionName "3.0.0"
+            versionCode 4
+            versionName "4.0.2512024"
             applicationId "com.bms.quanta5_bms"
             dimension "default"
             buildConfigField("String", "BASE_URL", "\"https://quantahims.com/APK/PatientWSCId.asmx/\"")
