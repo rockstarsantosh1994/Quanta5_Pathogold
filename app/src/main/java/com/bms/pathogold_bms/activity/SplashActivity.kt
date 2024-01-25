@@ -25,7 +25,8 @@ class SplashActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //Change android system's buttons color
-        window.navigationBarColor = ContextCompat.getColor(this@SplashActivity, R.color.purple_700)
+        window.navigationBarColor = ContextCompat.getColor(this@SplashActivity, R.color.white)
+        window.statusBarColor = ContextCompat.getColor(this@SplashActivity, R.color.white)
         //Get Token
         FirebaseMessaging.getInstance().token.addOnCompleteListener(OnCompleteListener { task ->
             if (!task.isSuccessful) {
